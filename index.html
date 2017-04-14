@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Chiguru Seva Trust</title>
+	<link rel="stylesheet" href="./client/styles/index.min.css" media="screen" title="no title">
+
+	<script src="./client/script/lib/angular.min.js"></script>
+	<script src="./client/script/lib/jquery-3.1.1.min.js"></script>
+	<script src="./client/script/lib/angular-route.min.js"></script>
+	<script src="./client/script/lib/angular-animate.min.js"></script>
+	<script src="./client/script/lib/angular-sanitize.min.js"></script>
+	<script src="./client/script/lib/ui-bootstrap-tpls-2.3.1.min.js"></script>
+	<script src="./client/script/lib/angular-ui-router.min.js"></script>
+	<script src="./client/script/index.js"></script>
+</head>
+<body ng-app="myApp" ng-controller="mainCtrl">
+	<header>
+		<div ng-include="'./client/partials/header.html'">
+
+		</div>
+	</header>
+	<section>
+		<div ui-view>
+
+		</div>
+	</section>
+	<script src="./client/script/controller/main.js"></script>
+	<script src="./client/script/controller/header.js"></script>
+	<script src="./client/script/controller/home.js"></script>
+	<script src="./client/script/controller/about.js"></script>
+	<script src="./client/script/controller/work.js"></script>
+	<script src="./client/script/controller/workDetail.js"></script>
+	<script src="./client/script/controller/additionOfProject.js"></script>
+	<script src="./client/script/controller/contact.js"></script>
+	<script src="./client/script/controller/donate.js"></script>
+	<script src="./client/script/services/apiCall.js"></script>
+	<script src="./client/script/services/workService.js"></script>
+
+
+</body>
+</html>

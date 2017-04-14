@@ -1,0 +1,26 @@
+//output:../work.html, pretty:false
+.header-gap.work-page
+    .grid.clearfix
+        .cont-hdr-wrapper
+            h3 Our Work
+                .underline
+            
+        .work-cards-container
+            .work-cards-wrapper.clearfix
+                .work-card(ng-repeat="card in WorkDone")
+                    .wrok-card-inner(ng-click="CardDetailClickEvent(card)")
+                        .card-wrapper(ng-style="card.img")
+                        .card-details-wrapper
+                            .card-details-inner
+                                span.glyphicon.glyphicon-arrow-right.card-icon
+                                .card-details-title {{card.displayTitle}}
+                                .card-details-subtitle 
+                                    span.details-title Date : 
+                                    | {{card.date}}
+                                .card-details-subtitle 
+                                    span.details-title Place : 
+                                    | {{card.venue}}
+                                    
+                        
+                    
+                    

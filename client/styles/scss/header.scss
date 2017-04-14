@@ -1,0 +1,49 @@
+// main: index.scss
+@import "variables.scss";
+
+
+header{
+    position: relative;
+    z-index: 10;
+}
+.headerWrapper{
+    position: fixed;
+    width: 100%;
+    z-index: 20;
+    height: $header-height;
+    background: $header-bg;
+}
+
+.header-logo-cont{
+    padding: 10px 0;
+    cursor: pointer;
+}
+.right-nav-cont{
+
+}
+.hdr-nav{
+    list-style-type: none;
+    margin-bottom: 0;
+    .hdr-nav-li{
+        font-size: 16px;
+        color: #fff;
+        float: left;
+        display: inline-block;
+        background: transparent;
+        cursor: pointer;
+        transition: color 0.3s ease-in-out,background 0.3s ease-in-out;
+        a{
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            display: inline-block;
+            padding: 0 20px;
+            line-height: $header-height;
+            color: inherit;
+            text-decoration: none;
+        }
+        &:hover, &.active{
+            color: $c-primary;
+            background: transparentize(#fff, 0.95);
+        }
+    }
+}

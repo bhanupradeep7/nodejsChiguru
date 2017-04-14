@@ -1,0 +1,17 @@
+// main: index.scss
+@import "variables.scss";
+.donate-page{
+    .page-bg-img-wrap{
+        background-image: url('../images/helping-hands.jpg');
+    }
+}
+.padding-top{
+    padding-top: 30px;
+    margin-bottom: 50px;
+}
+.sub-heading{
+    padding-top: 20px;
+}
+.form-space{
+    padding-bottom: 30px;
+}

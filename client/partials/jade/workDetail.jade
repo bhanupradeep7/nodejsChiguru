@@ -1,0 +1,30 @@
+//output:../workDetail.html, pretty:false
+.header-gap
+    .grid
+        
+            
+        .row
+            .col-xs-2.col-sm-2.col-md-2.col-lg-2
+                .bck-btn-wrap
+                    a(href="#/projectList") 
+                        span.glyphicon.glyphicon-chevron-left
+                        | &nbsp; back 
+            .col-xs-12.col-sm-12.col-md-8.col-lg-8
+                
+                    
+                
+                .work-detail-header
+                    h2 {{WorkDetail.displayTitle}}
+                    .underline
+                .clearfix.work-detail-container
+                    .work-scrollWrapper.clearfix
+                        div(style='height: 305px')
+                            div(uib-carousel='', active='active', interval='myInterval', no-wrap='noWrapSlides')
+                                div(uib-slide='', ng-repeat='slide in WorkDetail.images track by slide.id', index='slide.id')
+                                    img(ng-src='{{slide.image}}', style='margin:auto;')
+                                    .carousel-caption
+                                        //- h4 Slide {{slide.id}}
+                                        //- p {{slide.text}}
+                    .work-content-wrapper
+                        p(ng-repeat="content in WorkDetail.content track by $index") {{content}}
+                

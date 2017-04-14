@@ -1,0 +1,52 @@
+//output:../contact.html, pretty:false
+.header-gap 
+    .page-half-img-wrapper
+        a.img-wrap-container(href="https://www.google.co.in/maps/@12.9214301,77.6513611,17z")
+        
+    .grid.clearfix
+        .row.marginal-gap-top
+            .col-lg-1.col-md-1
+            .col-lg-4.col-md-4.col-sm-6.col-xs-12
+                .column-wrapper
+                    .cont-hdr-wrapper
+                        h3 Contact Info
+                            .underline
+                    table.cust-table
+                        tbody.cust-tbody
+                            tr.cust-tr
+                                td.cust-td.title-td Address  
+                                td.cust-td.title-td  : 
+                                td.cust-td.cont-td {{contact.address}}
+                            tr.cust-tr
+                                td.cust-td.title-td Phone
+                                td.cust-td.title-td  :  
+                                td.cust-td.cont-td {{contact.phone}}
+                            tr.cust-tr
+                                td.cust-td.title-td Email
+                                td.cust-td.title-td  : 
+                                td.cust-td.cont-td.email-td {{contact.email}}
+                                 
+            .col-lg-6.col-md-6.col-sm-6.col-xs-12
+                .cont-hdr-wrapper
+                    h3 Get in Touch with Us
+                        .underline
+                .paragraph-wrapper
+                    p Lorem ipsum british us is contact phone email title is in india with indira gandhi
+                    
+                .inp-wrapper
+                    .inp-title Your Name*
+                    .inp-wrap
+                        input(type="text", name="name", value="" ng-model="contactDetails.name")
+                        
+                .inp-wrapper
+                    .inp-title Your Email*
+                    .inp-wrap
+                        input(type="text", name="name", value="" ng-model="contactDetails.email")
+                        
+                .inp-wrapper
+                    .inp-title Your Message*
+                    .inp-wrap
+                        textarea( rows="4", cols="40" ng-model="contactDetails.message")
+                .btn-wrapper
+                    button(type="button") Send message
+                        

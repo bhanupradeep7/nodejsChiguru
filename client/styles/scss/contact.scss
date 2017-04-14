@@ -1,0 +1,82 @@
+// main: index.scss
+@import "variables.scss";
+
+
+.page-half-img-wrapper{
+    height: 450px;
+    .img-wrap-container{
+        display: block;
+        height: 100%;
+        background-image: url('../images/map.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+}
+.cust-td{
+    padding: 0 15px 15px 0;
+    // text-align: start;
+    line-height: 1.5;
+    font-size: 16px;
+    vertical-align: top;
+}
+.title-td{
+    font-weight: bold;
+}
+.email-td{
+    color: $c-link;
+    text-decoration: underline;
+}
+.paragraph-wrapper{
+    p{
+        font-size: 16px;
+        line-height: 1.5
+
+    }
+}
+.inp-wrapper{
+        padding: 10px 0;
+    .inp-title{
+        padding-bottom: 5px;
+        font-size: 16px;
+        font-family: OpenSansSemiBold;
+        // font-weight: bold;
+        line-height: 1.5;
+    }
+    input, textarea, select{
+        letter-spacing: 0.5px;
+        border: 1px solid $inp-border;
+        // background-color: $inp-bg ;
+        width: 100%;
+        padding: 8px 10px;
+        min-height: 30px;
+        font-size: 16px;
+        border-radius: 4px;
+        outline: none !important;
+        &:focus{
+            border: 1px solid $c-primary;
+        }
+    }
+}
+.btn-wrapper{
+    padding: 10px 0;
+    button{
+        padding: 10px 20px;
+        text-transform: uppercase;
+        border:1px solid $c-primary;
+        // background-color: #fff;
+        // color: $c-primary;
+        font-size: 16px;
+        font-weight: bold;
+        outline: none !important;
+        border-radius: 4px;
+        letter-spacing: 0.4px;
+        transition: box-shadow 0.2s ease-in-out;
+
+        background-color: rgba($c-primary,1);
+        color: #fff;
+        &:hover{
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+    }
+}

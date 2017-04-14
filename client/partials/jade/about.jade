@@ -1,0 +1,45 @@
+//output:../about.html, pretty:false
+-var dummy = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+div.about-page
+    .page-bg-img-wrap
+        .page-title 
+            | All you want to know about 
+            b.page-title-hght CHIGURU
+            .underline
+            
+    .grid.clearfix
+        .row
+            .left-nav-fixed-wrapper
+                .left-nav-wrapper
+                    ul
+                        li.left-nav-element(ng-repeat="elem in leftNavElements" ng-class="{'active-nav' : elem.active}" ng-click = "LeftNavElementClick(elem)")
+                            .left-nav-title {{elem.title}}
+                            span.left-nav-icon.glyphicon.glyphicon-arrow-right
+                    
+            .abt-cont-variable-wrapper
+                div(ng-if="leftNavElements[0].active")
+                    .cont-hdr-wrapper
+                        h3 About Us
+                            .underline
+                    .paragraph-wrapper
+                        p=dummy
+                div(ng-if="leftNavElements[1].active")        
+                    .cont-hdr-wrapper
+                        h3 Vision and Mission
+                            .underline
+                    .paragraph-wrapper
+                        p=dummy    
+                div(ng-if="leftNavElements[2].active")        
+                    .cont-hdr-wrapper
+                        h3 History
+                            .underline
+                    .paragraph-wrapper
+                        p=dummy
+                div(ng-if="leftNavElements[3].active")        
+                    .cont-hdr-wrapper
+                        h3 Finantials
+                            .underline
+                    .paragraph-wrapper
+                        p=dummy
+                        
+                    

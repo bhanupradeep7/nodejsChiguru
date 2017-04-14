@@ -1,0 +1,98 @@
+//output:../donate.html, pretty:false
+
+-var cities='';
+-var hearAboutOptions = ['Social Media','Friends', ''];
+
+div.donate-page
+    .page-bg-img-wrap
+        .page-title 
+            | Any kind of 
+            b.page-title-hght HELP 
+            | is Appretiated 
+            .underline
+            
+    .grid.clearfix
+        .row
+            .col-lg-6.col-md-6.col-sm-10.col-xs-12.col-md-push-3.col-lg-push-3.col-sm-push-1
+                div
+                    .cont-hdr-wrapper
+                        h3 Donations
+                            .underline
+                    .paragraph-wrapper
+                        p We accept all kinds of donations which can help children in their Education.     
+                    
+                    .sub-heading
+                        h4 Personal Details
+                            .underline
+                    form(action="", method="").form-space
+                        .row
+                            .col-xs-12.col-sm-12.col-md-12.col-lg-12
+                                .inp-wrapper
+                                    .inp-title Full Name*
+                                    .inp-wrap
+                                        input(type="text", value="" ng-model="personalDetails.name")
+                            
+                        .row
+                            .col-xs-12.col-sm-12.col-md-6.col-lg-6
+                                .inp-wrapper
+                                    .inp-title Mobile Number*
+                                    .inp-wrap
+                                        input(type="number", value="" ng-model="personalDetails.mobile")
+                            .col-xs-12.col-sm-12.col-md-6.col-lg-6
+                                .inp-wrapper
+                                    .inp-title Email*
+                                    .inp-wrap
+                                        input(type="text", value="" ng-model="personalDetails.email")
+                        .row
+                            .col-xs-12.col-sm-12.col-md-6.col-lg-6
+                                .inp-wrapper
+                                    .inp-title Amount*
+                                    .inp-wrap
+                                        input(type="text", value="" ng-model="personalDetails.amount")
+                            .col-xs-12.col-sm-12.col-md-6.col-lg-6
+                                .inp-wrapper
+                                    .inp-title Pancard
+                                    .inp-wrap
+                                        input(type="text", value="" ng-model="personalDetails.pancard")
+                        
+                        .row    
+                            .col-xs-12.col-sm-12.col-md-12.col-lg-12
+                                .inp-wrapper
+                                    .inp-title Address*
+                                    .inp-wrap
+                                        textarea( rows="4", cols="40" ng-model="personalDetails.address")
+                        .row    
+                            .col-xs-12.col-sm-12.col-md-6.col-lg-6
+                                .inp-wrapper
+                                    .inp-title State
+                                    .inp-wrap
+                                        select(name="singleSelect" ng-model="personalDetails.state")
+                                            option(value="karnataka") Karnataka
+                                        
+                                    
+                            .col-xs-12.col-sm-12.col-md-6.col-lg-6
+                                .inp-wrapper
+                                    .inp-title City
+                                    .inp-wrap
+                                        input(type="text", value="" ng-model="personalDetails.city")
+                                        
+                                        
+                        .row    
+                            .col-xs-12.col-sm-12.col-md-6.col-lg-6
+                                .inp-wrapper
+                                    .inp-title Pincode
+                                    .inp-wrap
+                                        input(type="text", value="" ng-model="personalDetails.pincode")
+                            
+                        //- .row    
+                        //-     .col-xs-12.col-sm-12.col-md-6.col-lg-6
+                        //-         .inp-wrapper
+                        //-             .inp-title How did you hear about Us?
+                        //-             .inp-wrap
+                        //-                 select(ng-model="personalDetails.hearabtUs")
+                        //-                     option(value="option") option
+                            
+                        .row
+                            .col-xs-12.col-sm-12.col-md-12.col-lg-12
+                                .btn-wrapper
+                                    button(type="submit") Send message

@@ -1,0 +1,73 @@
+//output:../additionOfProject.html, pretty:false
+
+.header-gap
+    .grid.clearfix
+        .content-hdr
+            h2 Helping Hands
+                .underline 
+        form(action="", method="")
+            .row
+                .col-xs-12.col-sm-12.col-md-12.col-lg-12
+                    .inp-wrapper
+                        .inp-title Display Text*
+                        .inp-wrap
+                            input(type="text", value="" ng-model="Project.displayText" name="displayText")
+                
+                .col-xs-12.col-sm-12.col-md-12.col-lg-12
+                    .inp-wrapper
+                        .inp-title School Name*
+                        .inp-wrap
+                            input(type="text", value="" ng-model="Project.schoolName" name="schoolName")
+                            
+                .col-xs-12.col-sm-12.col-md-12.col-lg-12
+                    .inp-wrapper
+                        .inp-title Date Of program*
+                        .inp-wrap
+                            input(type="date", value="" ng-model="Project.date" name="date")
+                            
+                .col-xs-12.col-sm-12.col-md-12.col-lg-12
+                    .inp-wrapper
+                        .inp-title Location* (Just the name ex:'Bangalore Urban')
+                        .inp-wrap
+                            input(type="text", value="" ng-model="Project.location" name="location")
+                    
+                .col-xs-12.col-sm-12.col-md-12.col-lg-12
+                    .inp-wrapper
+                        .inp-title Address*
+                        .inp-wrap
+                            input(type="text", value="" ng-model="Project.address" name="address")
+                            
+                .col-xs-12.col-sm-12.col-md-12.col-lg-12
+                    .inp-wrapper
+                        .inp-title Content*
+                        .inp-wrap
+                            textarea(type="text", value="" ng-model="Project.content1" maxlength="1000" name="content1")
+                        .inp-wrap
+                            textarea(type="text", value="" ng-model="Project.content2"  maxlength="1000" name="content2")
+                        .inp-wrap
+                            textarea(type="text", value="" ng-model="Project.content3"  maxlength="1000" name="content3")
+                        .inp-wrap
+                            textarea(type="text", value="" ng-model="Project.content4"  maxlength="1000" name="content4")
+                        .inp-wrap
+                            textarea(type="text", value="" ng-model="Project.content5"  maxlength="1000" name="content5")
+                            
+                .col-xs-12.col-sm-12.col-md-12.col-lg-12
+                    .inp-wrapper
+                        .inp-title Images*
+                        .inp-wrap
+                            input(type="file", accept="image/*", value="", ng-model="Project.Image1" name="Image1")
+                        .inp-wrap
+                            input(type="file", accept="image/*", value="", ng-model="Project.Image2" name="Image2")
+                        .inp-wrap
+                            input(type="file", accept="image/*", value="", ng-model="Project.Image3" name="Image3")
+                        .inp-wrap
+                            input(type="file", accept="image/*", value="", ng-model="Project.Image4" name="Image4")
+                        .inp-wrap
+                            input(type="file", accept="image/*", value="", ng-model="Project.Image5" name="Image5")
+                            
+                .col-xs-12.col-sm-12.col-md-12.col-lg-12
+                    .btn-wrapper
+                        button(type="submit" ng-click="addProject()") Add Project
+                            
+                
+                

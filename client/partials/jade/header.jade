@@ -1,0 +1,37 @@
+//output:../header.html, pretty:false
+//{
+    hdrlist : [{
+            title : "About us",
+            href    : "#/about",
+            active  : 'about'
+        },
+        {
+            title : " our work",
+            href    : "#/projectList",
+            active  : 'work'
+        },
+        {
+            title : "contact",
+            href    : "#/contact",
+            active  : 'contact'
+        },
+        {
+            title : "Donate",
+            href    : "#/donate",
+            active  : 'donate'
+        }
+    ],
+  }
+mixin headerNav(item)
+    li.hdr-nav-li(ui-sref-active="active")
+        a&attributes(attributes)= item.title
+    
+.headerWrapper(data-ng-controller='headerCtrl')
+    .clearfix.grid
+        a.header-logo-cont.left(href = "#/home")
+            img(src='./client/images/logo.png', alt='')
+        .right.right-nav-cont
+            ul.hdr-nav.clearfix
+                for list in hdrlist
+                    +headerNav(list)(ui-sref=list.active)
+        

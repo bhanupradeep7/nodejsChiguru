@@ -1,0 +1,114 @@
+//main: index.scss
+@import 'variables.scss';
+
+$card-width : 300px;
+$card-height : 390px;
+.work-card{
+    width: $card-width;
+    height: $card-height;
+    float: left;
+    padding: 10px;
+    cursor: pointer;
+    .wrok-card-inner{
+        height: 100%;
+        position: relative;
+    }
+    .card-wrapper{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .card-details-wrapper{
+        z-index: 1;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-color: rgba(#000,0.6);
+        color: #fff;
+    }
+    .card-icon{
+        opacity: 0;
+        color: #fff;
+        font-size: 18px;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        transform: translateX(-10px);
+        transition: transform 0.3s ease-in-out , opacity 0.3s ease-in-out;
+    }
+    .card-details-inner{
+        position: relative;
+        padding: 20px;
+    }
+    .card-details-title{
+        font-size: 32px;
+        line-height: 1.4;
+        padding: 5px 0;
+    }
+    .card-details-subtitle{
+        font-size: 14px;
+        line-height: 1.2;
+        padding: 5px 0;
+        font-family: OpenSansLight;
+        .details-title{
+            font-family: OpenSansLightItalic;
+        }
+    }
+    &:hover{
+        .card-icon{
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+}
+.work-detail-container{
+    margin: 20px 0;
+    padding: 0 20px;
+}
+.work-content-wrapper{
+    p{
+        font-size: 14px;
+        text-align: justify;
+        line-height: 1.5;
+        text-indent: 50px;
+        text-transform: capitalize;
+    }
+}
+.work-scrollWrapper{
+    width: 400px;
+    float: left;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+.carousel-control,.carousel-inner{
+    z-index: 2;
+}
+.bck-btn-wrap{
+    margin-top: 20px;
+
+    a{
+        padding: 10px 20px;
+        font-family: OpenSansBold;
+        text-transform: uppercase;
+        outline: none;
+        text-decoration: none !important;
+        color: white;
+        background-color: $c-primary;
+        height: 30px;
+        line-height: 20px;
+        font-size: 14px;
+        transition: box-shadow 0.3s ease-in;
+        border-radius: 4px;
+        &:hover{
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+        }
+    }
+}

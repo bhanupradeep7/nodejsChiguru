@@ -1,0 +1,71 @@
+// main: index.scss
+@import "variables.scss";
+.about-page{
+    .page-bg-img-wrap{
+        background-image: url('../images/helping-hands.jpg');
+    }
+}
+.left-nav-wrapper{
+    > ul{
+        margin: 0;
+        padding: 0;
+    }
+}
+$left_nav_wrapper : 300px;
+.left-nav-fixed-wrapper{
+    width: $left_nav_wrapper;
+}
+.abt-cont-variable-wrapper{
+    width: calc(100% - #{$left_nav_wrapper});
+    max-height: calc(100vh - #{$header-height} - 10px);
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin-bottom: 50px;
+}
+.abt-cont-variable-wrapper , .left-nav-fixed-wrapper{
+    float: left;
+    padding: 0 20px;
+}
+.left-nav-element{
+    position: relative;
+    background-color: $c-secondary;
+    color: #fff;
+    height: 50px;
+    cursor: pointer;
+    margin: 5px;
+    border-radius: 25px;
+    transition: background-color 0.3s ease-in-out;
+    &.active-nav{
+        background-color: rgba($c-secondary,0.8);
+        font-weight: bold;
+        .left-nav-icon{
+            display: none;
+        }
+    }
+    &:hover{
+        font-weight: bold;
+        .left-nav-icon{
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    .left-nav-title{
+        text-transform: capitalize;
+        position: relative;
+        font-size: 16px;
+        padding: 0 10px;
+        line-height: 1.2;
+        top: 50%;
+        transform: translateY(-50%);
+        text-align: center;
+    }
+    .left-nav-icon{
+        position: absolute;
+        right: 10px;
+        top: 17px;
+        font-size: 16px;
+        opacity: 0;
+        transform: translateX(-10px);
+        transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+    }
+}
